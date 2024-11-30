@@ -1,0 +1,47 @@
+<section class="centered-section">
+        <h2>Centered Image</h2>
+        <img src="your-image.jpg" alt="Centered Image">
+    </section>
+
+    <section>
+        <h2>Contact</h2>
+        <p>Feel free to reach out to us at <a href="mailto:info@example.com">info@example.com</a>.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Your Company. All rights reserved.</p>
+    </footer>
+
+
+
+
+
+
+.centered-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.centered-section h2 {
+    color: #333; /* Adjust the color as needed */
+}
+
+.centered-section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Make the page more responsive */
+@media (max-width: 600px) {
+    section {
+        padding: 10px;
+    }
+
+    .centered-section {
+        padding: 20px;
+    }
+}
