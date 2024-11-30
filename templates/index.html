@@ -1,18 +1,54 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% block header %}
+<div class="container">    
+        <h1 class="display-4 bold text-center" style="margin-top: 1em;margin-bottom: 1em;">{{title}}</h1>
+    <!--fasilitas -->
+        <p class="bold" style="color: #32af21;">{{fasilitas}}</p>
+        <ul>
+        {% for item in fasilitas_list %}
+        <li>
+            <p>{{ item }}</p>
+        </li>
+            {% endfor %}
+        </ul>
+    <!--keunggulan-->
+        <p class="bold" style="color: #32af21;">{{keunggulan}}</p>
+        <ul>
+        {% for item in keunggulan_list %}
+        <li>
+            <p>{{ item }}</p>
+        </li>
+            {% endfor %}
+        </ul>
 
-{% block header %}
-    <h1 class="display-4">{{heading}}</h1>
-    <h2 class="display-4"></h2>
-    <p class="lead">{{subheading}}</p>
+        <!-- Kamar Tables -->
+         <table class="table table-bordered">
+            <thead><p class="bold" style="color: #32af21;">Kamar</p></thead>
+            <tbody>
+                <tr>
+                        {%for item in kelas_kategori_list%}
+                        <td><p class="tabel-teks">{{item}}</p></td>
+                        {%endfor%}
+                </tr>
+                <tr>
+                    {%for item in kelas_gambar_list%}
+                    <td><img src="{{item}}" class="tabel-gambar"></td>
+                    {%endfor%}
+                </tr>
+                <tr>
+                    {% for key, value in kelas_deskripsi_list.items %}
+                    <td>
+                        <ul>
+                            {% for item in value %}
+                            <li class="li-unstyled">{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                    </td>
+                    {% endfor %}
+                </tr>
+            </tbody>
+         </table>
+</div>
 {% endblock header %}
 
-{% block content1 %}
-    <div class="row" style="height: 400px;">
-        <h1>CONTENT1</h1>
-    </div>
-{% endblock content1 %}
-{% block content2 %}
-    <div  class='row' style="height:300px">
-        <h1>CONTENT2</h1>
-    </div>
-{% endblock content2 %}
+{% block content %}
+{% endblock content %}

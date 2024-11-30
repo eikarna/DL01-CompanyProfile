@@ -333,3 +333,25 @@
 }
 
 /*====================================END SMARTPHONE MODE===================================*/
+
+/* SOME CUSTOM CSS */
+.tabel-gambar {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/3;
+  object-fit: scale-down;
+}
+
+.table td {
+  width: 33.33%;
+  padding: 10px;
+}
+
+.tabel-teks {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  margin: 0px;
+  padding: 0px;
+}
